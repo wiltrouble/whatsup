@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native";
 const styles =StyleSheet.create({
     container: {
         flexDirection: 'row',
-        with: '100%',
+        width: '100%',
         justifyContent: 'space-between',
         padding: 10
 
@@ -31,7 +31,7 @@ const styles =StyleSheet.create({
     },
     time: {
         color: 'gray',
-        fontSize: 16
+        fontSize: 12
     }
 })
 
