@@ -1,7 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons'; 
-import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
@@ -13,13 +11,13 @@ import TabTwoScreen from '../screens/TabTwoScreen';
 import { MainTabParamList, TabOneParamList, TabTwoParamList } from '../types';
 
 //const TopTab = createMaterialTopTabNavigator<MainTabParamList>();
-const TopTab = createBottomTabNavigator<MainTabParamList>();
+const MainTab = createBottomTabNavigator<MainTabParamList>();
 
 export default function MainTabNavigator() {
   const colorScheme = useColorScheme();
 
   return (
-    <TopTab.Navigator
+    <MainTab.Navigator
       initialRouteName="Chats"
       tabBarOptions={{ 
         activeTintColor: Colors[colorScheme].tint,
@@ -30,7 +28,7 @@ export default function MainTabNavigator() {
           fontWeight: 'bold'
         },
       }}>
-      <TopTab.Screen
+      <MainTab.Screen
         name="Status"
         component={TabOneNavigator}
         options={{
@@ -38,35 +36,35 @@ export default function MainTabNavigator() {
                    
         }}
       />
-      <TopTab.Screen
+      <MainTab.Screen
         name="Calls"
         component={TabTwoNavigator}
         options={{
           tabBarIcon: ({ color }) => <Ionicons name="call-outline" size={24} color={Colors[colorScheme].tint} />,
         }}
       />
-      <TopTab.Screen
+      <MainTab.Screen
         name="Camera"
         component={TabTwoNavigator}
         options={{
           tabBarIcon: ({ color }) => <Ionicons name="ios-camera-outline" size={24} color={Colors[colorScheme].tint} />,
         }}
       />
-      <TopTab.Screen
+      <MainTab.Screen
         name="Chats"
         component={TabTwoNavigator}
         options={{
           tabBarIcon: ({ color }) => <Ionicons name="chatbubbles-outline" size={24} color={Colors[colorScheme].tint} />,
         }}
       />
-      <TopTab.Screen
+      <MainTab.Screen
         name="Settings"
         component={TabTwoNavigator}
         options={{
           tabBarIcon: ({ color }) => <Ionicons name="md-settings-outline" size={24} color={Colors[colorScheme].tint} />,
         }}
       />                  
-    </TopTab.Navigator>
+    </MainTab.Navigator>
   );
 }
 
