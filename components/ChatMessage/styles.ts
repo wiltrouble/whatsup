@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     time: {
         alignSelf: "flex-end",
         color: "gray",
-        fontSize: 12
+        fontSize: 12 
     },
     message: {
         color: 'black'
