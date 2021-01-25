@@ -20,7 +20,8 @@ const ChatListItem = (props: ChatListItemProps) => {
     const onClick = () => {
         navigation.navigate('ChatRoomScreen', { 
             id: chatRoom.id,
-            name: user.name});
+            name: user.name,
+        });
     }
 
     return (
