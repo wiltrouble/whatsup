@@ -53,7 +53,7 @@ function RootNavigator() {
                width: 60, 
                justifyContent: 'space-between',
                marginRight: 10}}>
-              <Octicons name='search' size={22} color={Colors.light.background}/>
+              <Ionicons name='person-add-sharp' size={22} color={Colors.light.background} onPress={() => console.log("goo")}/>
               <MaterialCommunityIcons name='dots-vertical' size={22} color={Colors.light.background}/>
             </View>
           )
